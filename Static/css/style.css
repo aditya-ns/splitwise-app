@@ -1,0 +1,23 @@
+body {
+    background: #f7f9fc;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+}

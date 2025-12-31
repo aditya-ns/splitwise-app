@@ -1,0 +1,23 @@
+<h2>Settlement Results</h2>
+<p>Total Expense: ₹{{ total }}</p>
+<p>Equal Share: ₹{{ share }}</p>
+
+<h3>Balances</h3>
+<ul>
+{% for name, bal in balances.items() %}
+  <li>{{ name }} — {{ bal }}</li>
+{% endfor %}
+</ul>
+
+<h3>Who Pays Whom?</h3>
+{% if transactions %}
+  <ul>
+  {% for payer, receiver, amt in transactions %}
+    <li><strong>{{ payer }}</strong> pays <strong>{{ receiver }}</strong> ₹{{ amt }}</li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>Everyone is settled! 🎉</p>
+{% endif %}
+
+<a href="/">🔄 Back</a>
