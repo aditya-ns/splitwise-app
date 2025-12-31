@@ -20,4 +20,23 @@
   <p>Everyone is settled! 🎉</p>
 {% endif %}
 
+<h3 class="mt-5 fw-semibold">📤 Share Summary</h3>
+
+<!-- WhatsApp Share -->
+<a class="btn btn-success mt-2"
+   href="https://api.whatsapp.com/send?text=Group%20bill%20settlement%20results%20👉%20{{ request.url_root }}"
+   target="_blank">
+   📲 Share on WhatsApp
+</a>
+
+<!-- Copy Link Button -->
+<button class="btn btn-secondary mt-2" onclick="copyLink()">🔗 Copy Link</button>
+
+<script>
+function copyLink() {
+    navigator.clipboard.writeText(window.location.href);
+    alert("Link copied! Share it with your friends 🎉");
+}
+</script>
+
 <a href="/">🔄 Back</a>
